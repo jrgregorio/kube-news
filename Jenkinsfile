@@ -18,6 +18,10 @@ pipeline{
                         dockerapp.push('latest')
                         dockerapp.push("${env.BUILD_ID}")
                     }
+                }
+            }
+        }
+
 
         stage ('Deploy Kubernetes') {
             steps {
@@ -25,9 +29,7 @@ pipeline{
                     sh 'kubectl apply -f ./k8s/deployment.yaml'
                 } 
             } 
-        }            
-                }
-            }
-        }
+        }           
     }
+
 }
