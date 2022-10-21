@@ -44,7 +44,7 @@ kind: Deployment
 metadata:
   name: web
 spec:
-  replicas: 6
+  replicas: 4
   selector:
     matchLabels:
       app: web
@@ -52,6 +52,10 @@ spec:
     metadata:
       labels:
         app: web
+      annotations:
+        prometeus.io/scrape:  "true"
+        prometeus.io/port:  "8080"
+        prometeus.io/path: "/metrics"
     spec:
       containers:
        - name: web  

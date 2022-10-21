@@ -1,5 +1,0 @@
-{
-    "yaml.schemas": {
-        "kubernetes://schema/v1%40service": "file://wsl.localhost/Ubuntu/home/junior/aula/kube-news/k8s/deployment.yaml"
-    }
-}
