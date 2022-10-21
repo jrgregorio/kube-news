@@ -53,8 +53,8 @@ spec:
       labels:
         app: web
       annotations:
-        prometeus.io/scrape:  "true"
-        prometeus.io/port:  "8080"
+        prometeus.io/scrape: "true"
+        prometeus.io/port: "8080"
         prometeus.io/path: "/metrics"
     spec:
       containers:
